@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 3,
+    "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-05-07T02:51:38.673Z",
-    "end": "2024-05-07T02:51:38.691Z",
-    "duration": 18,
-    "testsRegistered": 2,
+    "start": "2024-05-08T05:33:01.426Z",
+    "end": "2024-05-08T05:33:01.442Z",
+    "duration": 16,
+    "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "69bcfe09-3608-4aca-be47-467356831da5",
+      "uuid": "0bd8e2d9-adf5-4282-8af8-47a977948122",
       "title": "",
       "fullFile": "D:\\ENRIQUE\\Programming\\EPAM_Automation_Testing\\test\\numberValidator\\isNumberEven.spec.js",
       "file": "\\test\\numberValidator\\isNumberEven.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d2e14313-7bbc-4009-a47d-d21a39847a85",
+          "uuid": "0425817f-cd7c-460d-93b4-4bc249084383",
           "title": "isNumberEven",
           "fullFile": "D:\\ENRIQUE\\Programming\\EPAM_Automation_Testing\\test\\numberValidator\\isNumberEven.spec.js",
           "file": "\\test\\numberValidator\\isNumberEven.spec.js",
@@ -43,10 +43,10 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Instantiates a new NumbersValidator object before each test and assigns it to 'validator'\nvalidator = new NumbersValidator();",
+              "code": "validator = new NumbersValidator();",
               "err": {},
-              "uuid": "bdbb6408-e4d5-4282-91a6-332a1915c766",
-              "parentUUID": "d2e14313-7bbc-4009-a47d-d21a39847a85",
+              "uuid": "066540c0-b2df-4f33-bf44-802aad0a4b34",
+              "parentUUID": "0425817f-cd7c-460d-93b4-4bc249084383",
               "isHook": true,
               "skipped": false
             }
@@ -63,10 +63,10 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Sets the validator variable to null to clean up memory after each test\nvalidator = null;",
+              "code": "validator = null;",
               "err": {},
-              "uuid": "a69fe812-4076-443f-bbf4-032205110bdc",
-              "parentUUID": "d2e14313-7bbc-4009-a47d-d21a39847a85",
+              "uuid": "dff890e0-1c26-45c0-bb72-4617fc117f4e",
+              "parentUUID": "0425817f-cd7c-460d-93b4-4bc249084383",
               "isHook": true,
               "skipped": false
             }
@@ -83,10 +83,28 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Using 'expect' to assert that the 'isNumberEven' method returns true when\n// passed the even number 4. The '.to.be.equal(true)' is the actual assertion check.\nexpect(validator.isNumberEven(4)).to.be.equal(true);",
+              "code": "expect(validator.isNumberEven(4)).to.be.equal(true);",
               "err": {},
-              "uuid": "063192e7-a3cb-47c6-8326-aac6077e0a4a",
-              "parentUUID": "d2e14313-7bbc-4009-a47d-d21a39847a85",
+              "uuid": "2c130d31-f106-4bb0-af0f-50279bfbd587",
+              "parentUUID": "0425817f-cd7c-460d-93b4-4bc249084383",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return false if number is odd",
+              "fullTitle": "isNumberEven should return false if number is odd",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(validator.isNumberEven(3)).to.be.equal(false);",
+              "err": {},
+              "uuid": "1ed2ee89-42da-48f6-afce-a920cfd87a40",
+              "parentUUID": "0425817f-cd7c-460d-93b4-4bc249084383",
               "isHook": false,
               "skipped": false
             },
@@ -101,18 +119,19 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "expect(() =>{\n    validator.isNumberEven(\"4\")\n}).to.throw('[4] is not of type \"Number\" it is of type \"string\"')",
+              "code": "expect(() =>{\n    validator.isNumberEven(\"4\");\n}).to.throw('[4] is not of type \"Number\" it is of type \"string\"');",
               "err": {},
-              "uuid": "a15d15f1-d7e1-4590-bfce-a384a816fb00",
-              "parentUUID": "d2e14313-7bbc-4009-a47d-d21a39847a85",
+              "uuid": "b35104f5-aa14-4fb8-9498-7fd0d39921d5",
+              "parentUUID": "0425817f-cd7c-460d-93b4-4bc249084383",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "063192e7-a3cb-47c6-8326-aac6077e0a4a",
-            "a15d15f1-d7e1-4590-bfce-a384a816fb00"
+            "2c130d31-f106-4bb0-af0f-50279bfbd587",
+            "1ed2ee89-42da-48f6-afce-a920cfd87a40",
+            "b35104f5-aa14-4fb8-9498-7fd0d39921d5"
           ],
           "failures": [],
           "pending": [],
